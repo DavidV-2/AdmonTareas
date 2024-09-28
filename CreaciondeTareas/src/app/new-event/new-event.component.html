@@ -1,0 +1,86 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <div class="bg-light boxStyle">
+                <h2>Nueva Tarea</h2>
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label for="NombreTarea">Nombre Tarea</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" id="NombreTarea" class="form-control" required />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label for="FechaLimite">Fecha Limite</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="date" id="FechaLimite" class="form-control" required />
+                    </div>
+                </div>
+                <br>
+                <h3>Personas Asociadas:</h3>
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label for="NombreCompleto">Nombre Completo</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" id="NombreCompleto" class="form-control" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label for="Edad">Edad</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="number" id="Edad" class="form-control" style="width: 20%" required />
+                    </div>
+                </div>
+                <br>
+                <h3>Habilidades:</h3>
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label for="Habilidades">Habilidades</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" id="Habilidades" class="form-control" style="width: 60%" required />
+                    </div>
+                    <div class="col-sm-2">
+                        <button onclick="añadirHabilidad()" class="btn btn-success">Añadir Habilidad</button>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Habilidades</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-2">
+                        <label for="EstadoTarea">Estado Tarea</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" id="EstadoTarea" class="form-control" required />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <button onclick="agregarTarea()" class="btn btn-primary">Agregar Tarea</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./new-event.js"></script>

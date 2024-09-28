@@ -1,0 +1,49 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <hr>
+    <h1>Tareas Asignadas</h1>
+    <p class="lead">¡Este visor de tareas te permitirá ver múltiples asignaciones de forma limpia!</p>
+    <hr>
+    <div class="row">
+        <div class="container">
+            <div class="float-end">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-success btn-filter" data-target="Completada">
+                        Completadas
+                    </button>
+                    <button type="button" class="btn btn-warning btn-filter" data-target="Pendiente">
+                        Pendientes
+                    </button>
+                </div>
+            </div>
+        </div>
+        <section class="content">
+            <br>
+            <div class="table table-bordered">
+                <table id="customers" class="table">
+                    <thead>
+                        <tr>
+                            <th>Nombre Tarea</th>
+                            <th>Fecha Limite</th>
+                            <th>Persona Asociada</th>
+                            <th>Edad</th>
+                            <th>Habilidades</th>
+                            <th>Estado Tarea</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let tarea of tareas" >
+                            <td>{{ tarea.nombre_tarea }}</td>
+                            <td>{{ tarea.fecha_limite }}</td>
+                            <td>{{ tarea.persona_asociada }}</td>
+                            <td>{{ tarea.edad }}</td>
+                            <td>{{ tarea.habilidades }}</td>
+                            <td>{{ tarea.estado_tarea }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="event-list.js"></script>
+</div>
